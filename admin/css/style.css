@@ -1,0 +1,124 @@
+html {
+    font-size: 16px;
+    font-family: 'Open Sans', sans-serif;
+}
+
+body{
+    min-height: 100vh;
+    margin: 0;
+    position: relative;
+    background-color: #d6d6d6;  
+    font-family: 'Open Sans', sans-serif;
+}
+
+.main,
+#prodavnica{
+    padding-bottom: 120px;
+}
+
+/****************KONTAKT****************/
+form {
+    padding-bottom: 50px;
+}
+
+input[type=text] {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    margin-top: 6px;
+    margin-bottom: 16px;
+    resize: vertical;
+}
+
+input[type=submit] {
+    background-color: #4CAF50;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+input[type=submit]:hover {
+    background-color: #45a049;
+}
+
+iframe {
+    border: 0;
+    width: 100%;
+    height: 410px;
+    padding-bottom: 60px;
+}
+
+#forma{
+    padding-bottom: 100px;
+}
+
+#rezIme,
+#rezEmail,
+#rezAdresa,
+#rezTelefon1,
+#rezPoruka{
+    color:red;
+}
+
+/****************GALERIJA****************/
+.galerija {
+    padding: 0px 50px 100px 50px;
+}
+
+.carousel-inner>.item>img {
+    width: auto;
+    max-height: 600px;
+    overflow: hidden;
+    margin: 0 auto;
+}
+
+/****************PRODAVNICA****************/
+.card {
+    height: auto;
+    width: 200px;
+    overflow: hidden;
+    margin: 10px;
+}
+
+.proizvodSlika img{
+    height: 400px;
+    width: auto;
+    text-align: center;
+}
+
+/****************TABELA****************/
+#tabela{
+margin-bottom: 100px;
+}
+
+#tabela img{
+    height: 60px;
+    width: auto;
+}
+
+.opistabela{
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: 4;
+    -webkit-box-orient: vertical;  
+}
+
+/****************ADMIN FORMA****************/
+#formaadmin{
+max-width: 400px;
+}
+
+/****************FOOTER****************/
+#footer{
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    color: rgba(255,255,255,.5);
+    background-color: #212529;
+    padding: 10px 0px;
+    height: 80px;
+}
