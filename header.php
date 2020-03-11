@@ -13,7 +13,7 @@
   </head>
   <body>
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-        <a class="navbar-brand" href="index.php">
-            <img src="admin/img/logo.jpg" width="30" height="30" class="d-inline-block align-top" alt=""> CITRUS SYSTEMS
+        <a class="navbar-brand display-1" href="index.php">
+            <img src="admin/img/logo.jpg" width="40" height="40" class="d-inline-block align-top" alt=""> CITRUS SYSTEMS
         </a>
     </nav>

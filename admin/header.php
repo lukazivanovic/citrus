@@ -28,9 +28,11 @@ session_start();
             <li class="nav-item">
                 <a class="nav-link" href="index.php"><i class="fas fa-book"></i> АДМИН</a>
             </li>
+            <?php if(isset($_SESSION["login_admin"])){ ?>
             <li class="nav-item">
             <a class="nav-link text-danger" href="logoutadmin.php"><i class="fas fa-sign-out-alt"></i> ОДЈАВА</a>
             </li>
+            <?php } ?>
             </ul>
         </div>
     </nav>

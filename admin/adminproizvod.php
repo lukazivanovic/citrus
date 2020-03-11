@@ -22,7 +22,7 @@ if(isset($_GET['delete'])){
   }
 }
 ?>
-<div class=container id="katalog">
+<div class="container" id="katalog">
   <div class="row d-flex justify-content-center">
     <a class="btn btn-primary mr-md-3" href="./" role="button">Назад</a>
     <a class="btn btn-primary" href="prododaj.php" role="button">Додај...</a>

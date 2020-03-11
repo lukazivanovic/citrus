@@ -7,8 +7,20 @@ body{
     min-height: 100vh;
     margin: 0;
     position: relative;
-    background-color: #d6d6d6;  
+    background-color: #65ccb8;  
     font-family: 'Open Sans', sans-serif;
+}
+
+/****************HEADER****************/
+.navbar {
+    position: relative;
+    padding: 40px 0px;
+}
+.navbar-brand {
+    position: absolute;
+    left: 50%;
+    margin-left: -100px !important;
+    display: block;
 }
 
 /****************POCETNA STRANA****************/
