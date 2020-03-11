@@ -9,11 +9,11 @@
     <script src="https://kit.fontawesome.com/9333006fb1.js" crossorigin="anonymous"></script>
     <link href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
-    <title>CITRUS SYSTEMS</title>
+    <title>CITRUS</title>
   </head>
   <body>
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
         <a class="navbar-brand display-1" href="index.php">
-            <img src="admin/img/logo.jpg" width="40" height="40" class="d-inline-block align-top" alt=""> CITRUS SYSTEMS
+            <img src="admin/img/logo.jpg" width="40" height="40" class="d-inline-block align-top" alt=""> CITRUS
         </a>
     </nav>

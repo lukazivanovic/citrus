@@ -54,10 +54,10 @@ if (!isset( $_SESSION['login_admin'] ) ) {
           </div>
           <div class="form-group">
             <label for="name">Текст</label>
-            <textarea type="text" class="form-control" name="tekst" placeholder="Текст" rows="3" required><?php echo $row['Text']; ?></textarea>
+            <textarea type="text" class="form-control" name="tekst" placeholder="Текст" rows="6" required><?php echo $row['Text']; ?></textarea>
           </div>
           <div class="form-group">
-            <button type="submit" name="Submit" class="btn btn-primary waves">измени корисника</button>
+            <button type="submit" name="Submit" class="btn btn-primary waves">измени коментар</button>
           </div>
         </form>
       </div>
