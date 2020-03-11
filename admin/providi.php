@@ -6,7 +6,7 @@ if (!isset( $_SESSION['login_admin'] ) ) {
 <div class="main">
   <div class="container">
     <?php
-    include "admin/connect.php";
+    include "connect.php";
     $upload_dir = 'img/proizvodi/';
     if (isset($_GET['id'])) {
       $id = $_GET['id'];
