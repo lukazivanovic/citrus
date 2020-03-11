@@ -44,7 +44,7 @@ if (!isset( $_SESSION['login_admin'] ) ) {
     ?>
     <a class="btn btn-primary mr-md-3" href="./" role="button">Назад</a>
     <a class="btn btn-primary" href="komdodaj.php" role="button">Додај...</a>
-    <!--tabela za prikaz svih korisnika-->
+    <!--tabela za prikaz svih komentara-->
     <table class="table table-striped table-bordered table-hover table-sm" id="tabela">
       <thead class="thead-dark">
         <tr>

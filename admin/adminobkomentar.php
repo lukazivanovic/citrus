@@ -14,24 +14,24 @@ if (!isset( $_SESSION['login_admin'] ) ) {
     $result = $mysqli->query($query);
     if(isset($_GET['delete'])){
       $id = $_GET['delete'];
-      //SQL upit za izbor korisnika
+      //SQL upit za izbor komentara
       $sql = "select * from obkomentar where ID = ".$id;
       $result = mysqli_query($mysqli, $sql);
       if(mysqli_num_rows($result) > 0){
         $row = mysqli_fetch_assoc($result);
         $image = $row['image'];
         unlink($upload_dir.$image);
-        //SQL upit za brisanje korisnika
+        //SQL upit za brisanje komentara
         $sql = "delete from obkomentar where ID=".$id;
         if(mysqli_query($mysqli, $sql)){
-          header('location:adminkorisnik.php');
+          header('location:adminobkomentar.php');
         }
       }
     }
     ?>
     <a class="btn btn-primary mr-md-3" href="./" role="button">Назад</a>
-    <a class="btn btn-primary" href="komdodaj.php" role="button">Додај...</a>
-    <!--tabela za prikaz svih korisnika-->
+    <a class="btn btn-primary" href="obkomdodaj.php" role="button">Додај...</a>
+    <!--tabela za prikaz svih komentara-->
     <table class="table table-striped table-bordered table-hover table-sm" id="tabela">
       <thead class="thead-dark">
         <tr>
