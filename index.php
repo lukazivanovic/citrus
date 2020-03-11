@@ -4,7 +4,7 @@ include "header.php";
     <div class="main">
         <div class="container">
             <div id="content">
-  
+            <h2>Производи</h2>
             <div class="row">
                 <div class="col mb-3 col-md-4 col-sm-6 col-12">
                     <div class="card h-100">
