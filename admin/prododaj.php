@@ -4,9 +4,7 @@ include "header.php";
 if (!isset( $_SESSION['login_admin'] ) ) { 
     header("location: loginformaadmin.php");
 }
-//otvaranje konekcije
-$conn = mysqli_connect("localhost", "root", "", "citrus");
-mysqli_set_charset( $conn, 'utf8');
+include "connect.php";
 $upload_dir = 'img/proizvodi/';
 //definisanje podataka o proizvodu
 if (isset($_POST['Submit'])) {

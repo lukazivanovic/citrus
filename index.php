@@ -1,8 +1,6 @@
 <?php
 include "header.php";
-//otvaranje konekcije 
-$mysqli = new mysqli("localhost", "root", "", "citrus");
-mysqli_set_charset( $mysqli, 'utf8');
+include "admin/connect.php";
 //SQL upit za trazenje proizvoda
 $query = "SELECT * FROM proizvod";
 $result = $mysqli->query($query);

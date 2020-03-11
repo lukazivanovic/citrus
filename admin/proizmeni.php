@@ -7,9 +7,7 @@ if (!isset( $_SESSION['login_admin'] ) ) {
 <div class="main">
     <div class="container">
         <?php
-        //otvaranje konekcije
-        $mysqli = mysqli_connect("localhost", "root", "", "citrus");
-        mysqli_set_charset( $mysqli, 'utf8');
+        include "connect.php";
         $upload_dir = 'img/proizvodi/';
         //SQL upit za izbor proizvoda
         if (isset($_GET['id'])) {

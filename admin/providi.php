@@ -6,8 +6,7 @@ if (!isset( $_SESSION['login_admin'] ) ) {
 <div class="main">
   <div class="container">
     <?php
-    $mysqli = mysqli_connect("localhost", "root", "", "citrus");
-    mysqli_set_charset( $mysqli, 'utf8');
+    include "admin/connect.php";
     $upload_dir = 'img/proizvodi/';
     if (isset($_GET['id'])) {
       $id = $_GET['id'];

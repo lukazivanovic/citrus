@@ -7,9 +7,7 @@ if (!isset( $_SESSION['login_admin'] ) ) {
 <div class="container">
   <div class="row d-flex justify-content-center">
     <?php 
-    //pocetak konekcije
-    $mysqli = new mysqli("localhost", "root", "", "citrus");
-    mysqli_set_charset( $mysqli, 'utf8');
+    include "connect.php";
     $query = "SELECT * FROM komentar";
     $result = $mysqli->query($query);
     if(isset($_GET['publish'])){

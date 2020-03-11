@@ -7,9 +7,7 @@ if (!isset( $_SESSION['login_admin'] ) ) {
 <div class="main">
   <div class="container">
     <?php
-    //pocetak konekcije
-    $mysqli = mysqli_connect("localhost", "root", "", "citrus");
-    mysqli_set_charset( $mysqli, 'utf8');
+    include "connect.php";
     if (isset($_GET['id'])) {
       $id = $_GET['id'];
       //SQL upit za izbor komentara

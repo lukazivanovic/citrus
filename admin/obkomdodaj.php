@@ -4,9 +4,7 @@ include "header.php";
 if (!isset( $_SESSION['login_admin'])) { 
     header("location: loginformaadmin.php");
 }
-//pocetak konekcije
-$conn = mysqli_connect("localhost", "root", "", "citrus");
-mysqli_set_charset( $conn, 'utf8');
+include "connect.php";
 if (isset($_POST['Submit'])) {
 	$ime = $_POST['ime'];
 	$email = $_POST['email'];

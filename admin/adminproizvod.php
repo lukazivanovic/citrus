@@ -3,8 +3,7 @@ include "header.php";
 if (!isset( $_SESSION['login_admin'] ) ) { 
     header("location: loginformaadmin.php");
 }
-$mysqli = new mysqli("localhost", "root", "", "citrus");
-mysqli_set_charset( $mysqli, 'utf8');
+include "connect.php";
 $query = "SELECT * FROM proizvod";
 $result = $mysqli->query($query);
 if(isset($_GET['delete'])){
