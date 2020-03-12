@@ -10,7 +10,8 @@ $resultKom = $mysqli->query($queryKom);
 if (isset($_POST['Submit'])) {
 	$ime = $_POST['ime'];
 	$email = $_POST['email'];
-	$tekst = $_POST['tekst'];
+    $tekst = $_POST['tekst'];
+
 	if(!isset($errorMsg)){
 		//SQL upit za dodavanje komentara
 		$sql = "insert into komentar(Datum, Ime, Email, Text) values('".date("Y-m-d")."', '".$ime."', '".$email."', '".$tekst."')";
