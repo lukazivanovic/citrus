@@ -12,15 +12,30 @@ if (isset($_POST['Submit'])) {
 	$email = trim(htmlspecialchars($_POST['email']));
     $tekst = trim(htmlspecialchars($_POST['tekst']));
 
+    function test_input($data) {
+        $data = trim($data);
+        $data = stripslashes($data);
+        $data = htmlspecialchars($data);
+        return $data;
+    }
+
+    $emailCheck = false;
+    $email = test_input($_POST["email"]);
+    if (filter_var($email, FILTER_VALIDATE_EMAIL)) {
+        $emailCheck = true;
+    }
+
 	if(!isset($errorMsg)){
-		//SQL upit za dodavanje komentara
-		$sql = "insert into komentar(Datum, Ime, Email, Text) values('".date("Y-m-d")."', '".$ime."', '".$email."', '".$tekst."')";
-		$result = mysqli_query($mysqli, $sql);
-		if($result){
-            //$successMsg = 'New record added successfully';
-			header('Location: index.php');
-        }else{
-            $errorMsg = 'Error '.mysqli_error($mysqli);
+        if($emailCheck){
+            //SQL upit za dodavanje komentara
+            $sql = "insert into komentar(Datum, Ime, Email, Text) values('".date("Y-m-d")."', '".$ime."', '".$email."', '".$tekst."')";
+            $result = mysqli_query($mysqli, $sql);
+            if($result){
+                //$successMsg = 'New record added successfully';
+                header('Location: hvala.php');
+            }else{
+                $errorMsg = 'Error '.mysqli_error($mysqli);
+            }
         }
     }
 }
@@ -70,7 +85,7 @@ if (isset($_POST['Submit'])) {
                             </div>
                             <div class="form-group">
                                 <label for="name">имејл</label>
-                                <input type="email" class="form-control" name="email" id="email" placeholder="имејл" value="" required>
+                                <input type="text" class="form-control" name="email" id="email" placeholder="имејл" value="" required>
                                 <p id="rezEmail"></p>
                             </div>
                             <div class="form-group">
