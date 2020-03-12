@@ -70,7 +70,7 @@ if (isset($_POST['Submit'])) {
                             </div>
                             <div class="form-group">
                                 <label for="name">имејл</label>
-                                <input type="text" class="form-control" name="email" id="email" placeholder="имејл" value="" required>
+                                <input type="email" class="form-control" name="email" id="email" placeholder="имејл" value="" required>
                                 <p id="rezEmail"></p>
                             </div>
                             <div class="form-group">
