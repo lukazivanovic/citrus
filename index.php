@@ -8,9 +8,9 @@ $queryKom = "SELECT * FROM obkomentar";
 $resultKom = $mysqli->query($queryKom);
 
 if (isset($_POST['Submit'])) {
-	$ime = $_POST['ime'];
-	$email = $_POST['email'];
-    $tekst = $_POST['tekst'];
+	$ime = trim(htmlspecialchars($_POST['ime']));
+	$email = trim(htmlspecialchars($_POST['email']));
+    $tekst = trim(htmlspecialchars($_POST['tekst']));
 
 	if(!isset($errorMsg)){
 		//SQL upit za dodavanje komentara
@@ -63,21 +63,22 @@ if (isset($_POST['Submit'])) {
                 <div class="row justify-content-center">
                     <div class="col-md-6">
                         <!--forma za dodavanje novog komentara-->
-                        <form class="" action="" method="post" enctype="multipart/form-data">
+                        <form class="" name="forma" id="forma" action="" method="post" enctype="multipart/form-data">
                             <div class="form-group">
                                 <label for="name">име</label>
-                                <input type="text" class="form-control" name="ime" placeholder="име" value="" required>
+                                <input type="text" class="form-control" name="ime" id="ime" placeholder="име" value="" required>
                             </div>
                             <div class="form-group">
                                 <label for="name">имејл</label>
-                                <input type="text" class="form-control" name="email" placeholder="имејл" value="" required>
+                                <input type="text" class="form-control" name="email" id="email" placeholder="имејл" value="" required>
+                                <p id="rezEmail"></p>
                             </div>
                             <div class="form-group">
                                 <label for="name">текст</label>
-                                <textarea type="text" class="form-control" name="tekst" placeholder="текст" rows="3" required></textarea>
+                                <textarea type="text" class="form-control" name="tekst" id="tekst" placeholder="текст" rows="3" required></textarea>
                             </div>
                                 <div class="form-group">
-                                <button type="submit" name="Submit" class="btn btn-primary waves">направи коментар</button>
+                                <button type="submit" name="Submit" class="btn btn-primary waves" onclick="proveri()">направи коментар</button>
                             </div>
                         </form>
                     </div>
