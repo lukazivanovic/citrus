@@ -13,3 +13,7 @@ Username: admin, Password: admin
 The MySQL database can be found in citrus.sql
 
 database: "citrus", host: "localhost", username: "root", password: ""
+
+![Alt text](Screenshot-CITRUS.png?raw=true "front page")
+
+![Alt text](Screenshot-CITRUS2.png?raw=true "admin page")
